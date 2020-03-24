@@ -1,0 +1,41 @@
+#login{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #2d3a4b;
+}
+#login>.login-form{
+    height: 240px;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -160px;
+}
+#login>.login-form>.title{
+    font-size: 26px;
+    color: #eee;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    font-weight: 700;
+}
+
+#login>.login-form>.layui-form>.layui-form{
+/*  */
+}
+#login>.login-form>.layui-form>.layui-form-item>.layui-input-block{
+    margin-left: 0;
+}
+#login>.login-form>.layui-form>.layui-form-item>.layui-input-block .inner-icon{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+#login>.login-form>.layui-form>.layui-form-item>.layui-input-block input{
+    padding-left: 30px;
+}
+#login>.login-form>.layui-form button{
+    width: 100%;
+}

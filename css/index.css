@@ -1,0 +1,90 @@
+.index-body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+/* 导航 */
+.index-body>.nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color:#393D49;
+}
+.index-body>.nav .menu-item{
+    cursor: pointer;
+}
+.index-body>.nav>.avatar{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border-bottom: 1px solid #eee; */
+}
+.index-body>.nav>.avatar>img{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    fill-opacity: 0.8;
+}
+.index-body>.nav>.avatar>span{
+    color: #FFF;
+    font-size: 22px;
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+/* 内容 */
+.index-body>.main{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 200px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+.index-body>.main>.header{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,21,41,.08);
+}
+.index-body>.main>.footer{
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+.index-body>.main>.content{
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+}
+/* 选项卡 */
+.index-body>.main>.content>.layui-tab{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.index-body>.main>.content>.layui-tab .layui-tab-title{
+    padding: 0 10px;
+}
+.index-body>.main>.content>.layui-tab .layui-tab-title li{
+    padding: 0 0 0 15px;
+}
+.index-body>.main>.content>.layui-tab>.layui-tab-content{
+    height: 100%;
+    margin: 0;
+    flex: 1;
+}
+.index-body>.main>.content>.layui-tab>.layui-tab-content>.layui-tab-item, .index-body>.main>.content>.layui-tab>.layui-tab-content>.layui-tab-item>.layui-show{
+    height: 100%;
+    width: 100%;
+}

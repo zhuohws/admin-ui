@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入css -->
+    <link rel="stylesheet" href="../node_modules/layui-src/dist/css/layui.css">
+    <link rel="stylesheet" href=../css/common.css>
+    <link rel="stylesheet" href=../css/index.css>
+    <title>基于layui的框架</title>
+</head>
+<body>
+    <div class="index-body">
+        <!-- 导航 -->
+        <div class="nav">
+            <div class="avatar">
+                <img src="../images/logo.png" alt="">
+                <span id="username"></span>
+            </div>
+            <ul class="layui-nav layui-nav-tree" lay-filter="navDemo">
+                <!-- <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">默认展开</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">选项1</a></dd>
+                        <dd><a href="javascript:;">选项2</a></dd>
+                        <dd><a href="javascript:;">跳转</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="javascript:;">产品</a></li>
+                <li class="layui-nav-item"><a href="javascript:;">大数据</a></li> -->
+            </ul>
+        </div>
+        <!-- 内容 -->
+        <div class="main">
+                <!-- 头部 -->
+                <!-- <div class="header">
+                    头部
+                </div> -->
+                <!-- 内容 -->
+                <div class="content">
+                    <div class="layui-tab layui-tab-brief" lay-allowClose="true" lay-filter="tabDemo">
+                        <ul class="layui-tab-title">
+                            <!-- <li class="layui-this">网站设置</li>
+                            <li>用户管理</li>
+                            <li>权限分配</li> -->
+                        </ul>
+                        <div class="layui-tab-content" style="height: 100px;">
+                            <!-- <div class="layui-tab-item">
+                                <iframe src="" frameborder="0"></iframe>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 底部 -->
+                <div class="footer">
+                    底部
+                </div>
+        </div>
+    </div>
+    <!-- 引入js -->
+    <script  type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    <script  type="text/javascript" src="../node_modules/jquery-cookie.js"></script>
+    <script  type="text/javascript" src="../node_modules/layui-src/dist/layui.all.js"></script>
+    <script  type="text/javascript" src="../js/common.js"></script>
+    <script  type="text/javascript" src="../js/index.js"></script>
+</body>
+</html>
