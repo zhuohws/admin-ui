@@ -22,7 +22,9 @@ form.on('submit(formDemo)', function(data){
         layer.msg('用户名或密码错误');
         return false;
     }
-    $.cookie('user', data.field.username);
+    // 存储
+    $.cookie('user', data.field.username, { expires: 7, path: '/' });
+    sessionStorage.setItem("user", data.field.username);
     location.href = "index.html";
     layer.msg('登录成功');
 });

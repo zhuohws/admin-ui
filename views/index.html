@@ -14,9 +14,9 @@
     <div class="index-body">
         <!-- 导航 -->
         <div class="nav">
-            <div class="avatar">
-                <img src="../images/logo.png" alt="">
-                <span id="username"></span>
+            <div id="logo">
+                <span id="logo-text">YueSheng</span>
+                <span id="logo-image"><i class="layui-icon layui-icon-senior"></i></span>
             </div>
             <ul class="layui-nav layui-nav-tree" lay-filter="navDemo">
                 <!-- <li class="layui-nav-item layui-nav-itemed">
@@ -34,9 +34,29 @@
         <!-- 内容 -->
         <div class="main">
                 <!-- 头部 -->
-                <!-- <div class="header">
-                    头部
-                </div> -->
+                <div class="header">
+                    <ul class="nav-float-left">
+                        <li class="nav-flex-item" id="toggleNav">
+                            <i class="layui-icon layui-icon-shrink-right"></i>
+                        </li>
+                        <li class="nav-flex-item" id="refresh">
+                            <i class="layui-icon layui-icon-refresh-1"></i>
+                        </li>
+                    </ul>
+                    <ul class="nav-float-right">
+                        <li class="nav-flex-item" id="user">
+                            <i class="layui-icon layui-icon-user"></i>
+                            <div id="user-info">
+                                <div id="username"></div>
+                                <hr class="layui-bg-gray" style="margin: 2px 0;">
+                                <div id="login-out">登出</div>
+                            </div>
+                        </li>
+                        <li class="nav-flex-item" id="fullExit">
+                            <i class="layui-icon layui-icon-screen-full"></i>
+                        </li>
+                    </ul>
+                </div>
                 <!-- 内容 -->
                 <div class="content">
                     <div class="layui-tab layui-tab-brief" lay-allowClose="true" lay-filter="tabDemo">
@@ -53,13 +73,13 @@
                     </div>
                 </div>
                 <!-- 底部 -->
-                <div class="footer">
+                <!-- <div class="footer">
                     底部
-                </div>
+                </div> -->
         </div>
     </div>
     <!-- 引入js -->
-    <script  type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    <script  type="text/javascript" src="../node_modules/jquery.min.js"></script>
     <script  type="text/javascript" src="../node_modules/jquery-cookie.js"></script>
     <script  type="text/javascript" src="../node_modules/layui-src/dist/layui.all.js"></script>
     <script  type="text/javascript" src="../js/common.js"></script>

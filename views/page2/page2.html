@@ -1,12 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>页面2</title>
+    <!-- 引入css -->
+    <link rel="stylesheet" href="../../node_modules/layui-src/dist/css/layui.css">
+    <link rel="stylesheet" href=../../css/common.css>
+    <link rel="stylesheet" href=../../css/index.css>
+    <style>
+        #page2-content{
+            padding: 18px;
+            height: 100%;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
 <body>
-    我是页面2啊
+    <div class="page-content" id="page2-content">
+        <button type="button" id="para" class="layui-btn layui-btn-primary">弹窗</button>
+        <button type="button" class="layui-btn layui-btn-primary" >原始</button>
+        <button type="button" class="layui-btn">默认</button>
+        <button type="button" class="layui-btn layui-btn-normal" >百搭</button>
+        <button type="button" class="layui-btn layui-btn-warm" >暖色</button>
+        <button type="button" class="layui-btn layui-btn-danger" >警告</button>
+        <button type="button" class="layui-btn layui-btn-disabled" >禁用</button>
+    </div>
+    <!-- 引入js -->
+    <script type="text/javascript" src="../../node_modules/jquery.min.js"></script>
+    <script type="text/javascript" src="../../node_modules/jquery-cookie.js"></script>
+    <script type="text/javascript" src="../../node_modules/layui-src/dist/layui.all.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script>
+    <script type="text/javascript" src="page2.js"></script>
+    <script type="text/javascript">
+        page2.pageInit('#page2-content');
+    </script>
 </body>
 </html>
