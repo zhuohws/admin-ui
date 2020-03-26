@@ -57,7 +57,7 @@ $(document).ready(function(){
                     menuName: '柱状图',
                     menuIcon: 'layui-icon glyphicon-fire',
                     menuId: 5,
-                    menuUrl: 'page5/page5.html',
+                    menuUrl: 'echarts/bar/bar.html',
                 },
                 {
                     menuName: '折线图',
@@ -144,7 +144,6 @@ $(document).ready(function(){
     function eleInit () {
         // 菜单点击事件
         layui.element.on('nav(navDemo)', function(data){
-            console.log(1)
             var url = $(this).attr('data-url');
             var menuId = $(this).attr('data-menuId');
             var menuName = $(this).attr('data-menuName');
@@ -155,8 +154,10 @@ $(document).ready(function(){
                     $('.layui-tab-title').append(liStr);
                     var contentStr = '<div class="layui-tab-item">'
                         + '<iframe src="'+ url +'" frameborder="0" height="100%" width="100%"></iframe>'
+                        // + '<div class="page-content"></div>'
                     + '</div>';
                     $('.layui-tab-content').append(contentStr);
+                    // $('.page-content').last().load(url);
                     layui.element.render('tab', 'tabDemo');
                 }
                 layui.element.tabChange('tabDemo', menuId);
