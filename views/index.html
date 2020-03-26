@@ -6,19 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- 引入css -->
     <link rel="stylesheet" href="../node_modules/layui-src/dist/css/layui.css">
-    <link rel="stylesheet" href=../css/common.css>
-    <link rel="stylesheet" href=../css/index.css>
-    <title>基于layui的框架</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-table/dist/bootstrap-table-fixed-columns.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>YueSheng</title>
 </head>
 <body>
-    <div class="index-body">
+    <div class="index-body" id="index-content">
         <!-- 导航 -->
         <div class="nav">
             <div id="logo">
                 <span id="logo-text">YueSheng</span>
                 <span id="logo-image"><i class="layui-icon layui-icon-senior"></i></span>
             </div>
-            <ul class="layui-nav layui-nav-tree" lay-filter="navDemo">
+            <ul class="layui-nav layui-nav-tree" lay-filter="navDemo" id="navDemo">
                 <!-- <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;">默认展开</a>
                     <dl class="layui-nav-child">
@@ -81,8 +84,14 @@
     <!-- 引入js -->
     <script  type="text/javascript" src="../node_modules/jquery.min.js"></script>
     <script  type="text/javascript" src="../node_modules/jquery-cookie.js"></script>
+    <script type="text/javascript" src="../node_modules/echarts.min.js"></script>
     <script  type="text/javascript" src="../node_modules/layui-src/dist/layui.all.js"></script>
+    <script  type="text/javascript" src="../node_modules/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script  type="text/javascript" src="../node_modules/bootstrap-table/dist/bootstrap-table-locale-all.min.js"></script>
     <script  type="text/javascript" src="../js/common.js"></script>
     <script  type="text/javascript" src="../js/index.js"></script>
+    <script  type="text/javascript">
+        myIndex.pageInit('#index-content');
+    </script>
 </body>
 </html>

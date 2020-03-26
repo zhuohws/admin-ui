@@ -114,15 +114,6 @@
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
 .index-body>.main>.footer{
     width: 100%;
     line-height: 40px;
@@ -150,8 +141,17 @@
     height: 100%;
     margin: 0;
     flex: 1;
+    padding: 0;
+    overflow: auto;
 }
 .index-body>.main>.content>.layui-tab>.layui-tab-content>.layui-tab-item, .index-body>.main>.content>.layui-tab>.layui-tab-content>.layui-tab-item>.layui-show{
     height: 100%;
     width: 100%;
+}
+
+.page-content{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
