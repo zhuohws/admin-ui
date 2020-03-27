@@ -1,8 +1,8 @@
-var form = layui.form;
-var layer = layui.layer;
+"use strict";
+var form = layui.form,
+    layer = layui.layer;
 //监听提交
-form.on('submit(formDemo)', function(data){
-    console.log(data.field);
+form.on('submit(formDemo)', function (data) {
     var obj = data.field;
     // 请求接口
     // $.ajax({
@@ -18,7 +18,7 @@ form.on('submit(formDemo)', function(data){
     //         layer.msg('登录失败');
     //     }
     // })
-    if (data.field.username != 'admin' || data.field.userpass != '11111') {
+    if (data.field.username != 'admin' || data.field.userpass != '111111') {
         layer.msg('用户名或密码错误');
         return false;
     }
@@ -26,5 +26,4 @@ form.on('submit(formDemo)', function(data){
     $.cookie('user', data.field.username, { expires: 7, path: '/' });
     sessionStorage.setItem("user", data.field.username);
     location.href = "index.html";
-    layer.msg('登录成功');
 });

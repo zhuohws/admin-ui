@@ -48,21 +48,12 @@ function transMenu (item) {
     navHtml += '</dl>';
     return navHtml;
 };
-// loading
-function watingShow () {
-    $('#loading').show();
-}
-function watingHide () {
-    $('#loading').hide();
-}
-
 // 加载tab页
 function switchTab (obj) {
     var url = obj.menuUrl,
         menuName = obj.menuName,
         menuId = obj.menuId;
     if (url && menuId) {
-        activeTab = obj;
         if (selectedTabs.indexOf(menuId) == -1) {
             selectedTabs.push(menuId);
             var liStr = '<li lay-id="' + menuId + '" data-layId="' + menuId + '">' + menuName + '</li>';
@@ -82,15 +73,16 @@ function switchTab (obj) {
             });
         } else {
             // 刷新页面
-            $('.page-content').last().load('loading.html', function(response,status,xhr) {
+            $('.layui-show .page-content').last().load('loading.html', function(response,status,xhr) {
                 setTimeout(function(){
                     watingShow();
-                    $('.page-content').last().load(url, function(response,status,xhr) {
+                    $('.layui-show .page-content').last().load(url, function(response,status,xhr) {
                         watingHide();
                     });
                 }, 100);
             });
         }
+        activeTab = obj;
         element.tabChange('tabDemo', menuId);
     }
 };
@@ -98,3 +90,13 @@ function switchTab (obj) {
 $(window).resize(function(){
     $("table").bootstrapTable('resetView');
 })
+// loading
+function watingShow () {
+    $('#loading').show();
+}
+function watingHide () {
+    $('#loading').hide();
+}
+function foo (res) {
+    console.log(res);
+}

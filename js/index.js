@@ -1,3 +1,4 @@
+"use strict";
 var myIndex = {
     menu: []
 };
@@ -7,24 +8,20 @@ myIndex.pageInit = function (content) {
     getMenu();
     elementBind();
     eventBind();
-    var firstObj = (myIndex.menu[0].children && myIndex.menu[0].children.length > 0) ? myIndex.menu[0].children[0] : myIndex.menu[0];
-    switchTab(firstObj);
-};
+}
 // 检查用户是否登录
 function loginVerify () {
-    setTimeout(function(){
-        if (!$.cookie('user') && !sessionStorage.getItem("user")) {
+    if (!$.cookie('user') && !sessionStorage.getItem("user")) {
+        location.href = "login.html";
+    } else {
+        $('#username').text($.cookie('user') ? $.cookie('user') : sessionStorage.getItem("user"));
+        $('#login-out').click(function(){
+            $.removeCookie('user');
+            sessionStorage.removeItem("user");
             location.href = "login.html";
-        } else {
-            $('#username').text($.cookie('user') ? $.cookie('user') : sessionStorage.getItem("user"));
-            $('#login-out').click(function(){
-                $.removeCookie('user');
-                sessionStorage.removeItem("user");
-                location.href = "login.html";
-            })
-        }
-    }, 10)
-};
+        });
+    }
+}
 // 获取menu
 function getMenu () {
     // ajax获取菜单
@@ -35,14 +32,12 @@ function getMenu () {
             menuIcon: 'layui-icon layui-icon-home',
             menuId: 'A',
             menuUrl: 'home/home.html',
-            unionId: 'shouye',
         },
         {
             menuName: 'echarts组件',
             menuIcon: 'layui-icon layui-icon-chart',
             menuId: 'C',
             menuUrl: '',
-            unionId: 'sky',
             children: [
                 {
                     menuName: '柱状图',
@@ -96,7 +91,6 @@ function getMenu () {
             menuIcon: 'layui-icon layui-icon-set',
             menuId: 'D',
             menuUrl: '',
-            unionId: 'sky',
             children: [
                 {
                     menuName: '系统设置',
@@ -128,7 +122,7 @@ function getMenu () {
         },
     ];
     initMenu(myIndex.menu);
-};
+}
 // 初始化menu
 function initMenu (menu) {
     $('.layui-nav').empty();
@@ -143,10 +137,7 @@ function initMenu (menu) {
     });
     $('.layui-nav').html(navHtml);
     element.render('nav', 'navDemo');
-    var initNavId = ((myIndex.menu[0].children && myIndex.menu[0].children.length > 0) ? myIndex.menu[0].children[0].menuId : myIndex.menu[0].menuId).toString();
-    element.render('tab', 'tabDemo');
-    element.tabChange('tabDemo', initNavId);
-};
+}
 // 监听element切换等事件
 function elementBind () {
     // 菜单点击事件
@@ -178,7 +169,7 @@ function elementBind () {
         var layId = $(this).parent().attr('data-layId');
         selectedTabs.splice(selectedTabs.indexOf(layId + ''), 1);
     });
-};
+}
 // 默认事件绑定
 function eventBind () {
     // 全屏&&退出全屏
@@ -230,4 +221,6 @@ function eventBind () {
     document.onclick = function (e) {
         $('#user-info').hide();
     }
-};
+    var firstObj = (myIndex.menu[0].children && myIndex.menu[0].children.length > 0) ? myIndex.menu[0].children[0] : myIndex.menu[0];
+    switchTab(firstObj);
+}
