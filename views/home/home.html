@@ -1,0 +1,185 @@
+<html lang="en">
+<head>
+    <style>
+        #home-content{
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #eff1f4;
+        }
+        .shortcut, .tolist{
+            height: 300px;
+        }
+        .tolist .edit-book{
+            height: 230px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .table-example>.layui-card-body{
+            height: calc(100vh - 475px);
+            overflow: auto;
+        }
+        .about{
+            height: calc(100vh - 125px);
+            overflow: auto;
+        }
+        #home-content .layui-carousel-ind {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            text-align: right;
+        }
+        #home-content .layui-carousel-ind ul{
+            background-color: #fff;
+        }
+
+        #home-content .layui-carousel-ind li{
+            background-color: #e2e2e2;
+        }
+        #home-content .layui-carousel-ind .layui-this{
+            background-color: #999;
+        }
+        .layui-carousel .ul-item{
+            background: #fff;
+        }
+        .layui-carousel .li-item{
+            height: 120px;
+            background-color: #fff;
+            cursor: pointer;
+            line-height: 50px;
+        }
+        .layui-carousel .li-item .ico:hover{
+            background-color: #F1F1F1;
+            transition: all .3s linear;
+        }
+        .layui-carousel .li-item .ico{
+            background-color: #F8F8F8;
+            border-radius: 8px;
+            line-height: 70px;
+            transition: all .3s linear;
+            font-size: 30px;
+        }
+        .layui-carousel .li-item .ico i{
+            font-size: 26px;
+        }
+        .layui-carousel .ul-item{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="home-content">
+        <div class="layui-row layui-col-space10">
+            <div class="layui-row layui-col-space10 layui-col-md8">
+                <div class="layui-col-md6">
+                    <div class="layui-card shortcut">
+                        <div class="layui-card-header">
+                            快捷方式
+                        </div>
+                        <div class="layui-card-body">
+                            <div class="layui-carousel" id="test1">
+                                <div carousel-item>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md6">
+                    <div class="layui-card tolist">
+                        <div class="layui-card-header">
+                            备忘录
+                        </div>
+                        <div class="layui-card-body">
+                            <div class="edit-book" id="remember" contenteditable="true">
+                                今天要按时吃饭
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md12">
+                    <div class="layui-card table-example">
+                        <div class="layui-card-header">
+                            table示例
+                        </div>
+                        <div class="layui-card-body">
+                            <div class="table-responsive">
+                                <table id="example-table" class="table table-striped table-bordered table-hover" style="table-layout: fixed;word-break:break-all;word-wrap:break-word;"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md4">
+                <div class="layui-card about">
+                    <div class="layui-card-header">
+                        时间线
+                    </div>
+                    <div class="layui-card-body">
+                        <ul class="layui-timeline">
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">8月18日</h3>
+                                <p>
+                                    layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。
+                                    <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。
+                                    <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class="layui-icon"></i>
+                                </p>
+                                </div>
+                            </li>
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">8月16日</h3>
+                                <p>杜甫的思想核心是儒家的仁政思想，他有“<em>致君尧舜上，再使风俗淳</em>”的宏伟抱负。个人最爱的名篇有：</p>
+                                <ul>
+                                    <li>《登高》</li>
+                                    <li>《茅屋为秋风所破歌》</li>
+                                </ul>
+                                </div>
+                            </li>
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">8月15日</h3>
+                                <p>
+                                    中国人民抗日战争胜利72周年
+                                    <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代
+                                    <br>铭记、感恩
+                                    <br>所有为中华民族浴血奋战的英雄将士
+                                    <br>永垂不朽
+                                </p>
+                                </div>
+                            </li>
+                            <li class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                                <div class="layui-timeline-content layui-text">
+                                <div class="layui-timeline-title">过去</div>
+                                    <p>
+                                        中国人民抗日战争胜利72周年
+                                        <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代
+                                        <br>铭记、感恩
+                                        <br>所有为中华民族浴血奋战的英雄将士
+                                        <br>永垂不朽
+                                    </p>
+                                    <p>
+                                        中国人民抗日战争胜利72周年
+                                        <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代
+                                        <br>铭记、感恩
+                                        <br>所有为中华民族浴血奋战的英雄将士
+                                        <br>永垂不朽
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../views/home/home.js"></script>
+    <script type="text/javascript">
+        home.pageInit('#home-content');
+    </script>
+</body>
+</html>

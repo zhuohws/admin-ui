@@ -4,6 +4,7 @@ var layer = layui.layer,
     carousel = layui.carousel,
     element = layui.element;
 var selectedTabs = [];
+var activeTab = {};
 // 全屏
 function requestFullScreen(element) {
     var requestMethod = element.requestFullScreen || //W3C
@@ -47,12 +48,21 @@ function transMenu (item) {
     navHtml += '</dl>';
     return navHtml;
 };
+// loading
+function watingShow () {
+    $('#loading').show();
+}
+function watingHide () {
+    $('#loading').hide();
+}
+
 // 加载tab页
 function switchTab (obj) {
     var url = obj.menuUrl,
         menuName = obj.menuName,
         menuId = obj.menuId;
     if (url && menuId) {
+        activeTab = obj;
         if (selectedTabs.indexOf(menuId) == -1) {
             selectedTabs.push(menuId);
             var liStr = '<li lay-id="' + menuId + '" data-layId="' + menuId + '">' + menuName + '</li>';
@@ -62,9 +72,29 @@ function switchTab (obj) {
                 + '<div class="page-content"></div>'
             + '</div>';
             $('.layui-tab-content').append(contentStr);
-            $('.page-content').last().load(url);
-            element.render('tab', 'tabDemo');
+            watingShow();
+            $('.page-content').last().load(url, function(response,status,xhr) {
+                if (response && response.indexOf('<title>404 Not Found</title>') > -1) {
+                    $('.page-content').last().load('404.html');
+                }
+                watingHide();
+                element.render('tab', 'tabDemo');
+            });
+        } else {
+            // 刷新页面
+            $('.page-content').last().load('loading.html', function(response,status,xhr) {
+                setTimeout(function(){
+                    watingShow();
+                    $('.page-content').last().load(url, function(response,status,xhr) {
+                        watingHide();
+                    });
+                }, 100);
+            });
         }
         element.tabChange('tabDemo', menuId);
     }
 };
+// 窗口变化时更新table
+$(window).resize(function(){
+    $("table").bootstrapTable('resetView');
+})

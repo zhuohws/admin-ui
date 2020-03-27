@@ -34,7 +34,7 @@ function getMenu () {
             menuName: '首页',
             menuIcon: 'layui-icon layui-icon-home',
             menuId: 'A',
-            menuUrl: 'page1/page1.html',
+            menuUrl: 'home/home.html',
             unionId: 'shouye',
         },
         {
@@ -45,22 +45,22 @@ function getMenu () {
             unionId: 'sky',
             children: [
                 {
-                    menuName: '饼状图',
-                    menuIcon: 'layui-icon layui-icon-light',
-                    menuId: 4,
-                    menuUrl: 'page4/page4.html',
-                },
-                {
                     menuName: '柱状图',
                     menuIcon: 'layui-icon layui-icon-template-1',
-                    menuId: 5,
+                    menuId: 4,
                     menuUrl: 'echarts/bar/bar.html',
+                },
+                {
+                    menuName: '饼状图',
+                    menuIcon: 'layui-icon layui-icon-light',
+                    menuId: 5,
+                    menuUrl: 'echarts/pie/pie.html',
                 },
                 {
                     menuName: '折线图',
                     menuIcon: 'layui-icon layui-icon-senior',
                     menuId: 6,
-                    menuUrl: 'page6/page6.html',
+                    menuUrl: 'echarts/line/line.html',
                 }
             ]
         },
@@ -158,11 +158,6 @@ function elementBind () {
         }
         switchTab(obj);
     });
-    // tab删除事件
-    element.on('tabDelete(tabDemo)', function(data){
-        var layId = $(this).parent().attr('data-layId');
-        selectedTabs.splice(layId, 1);
-    });
     // tab切换绑定
     element.on('tab(tabDemo)', function(data){
         var activeId = $(this).attr('data-layid');
@@ -177,6 +172,11 @@ function elementBind () {
                 $(n).parent().addClass('layui-this');
             }
         })
+    });
+    // tab删除事件
+    element.on('tabDelete(tabDemo)', function(data){
+        var layId = $(this).parent().attr('data-layId');
+        selectedTabs.splice(selectedTabs.indexOf(layId + ''), 1);
     });
 };
 // 默认事件绑定
@@ -210,13 +210,16 @@ function eventBind () {
             $('.menu-text').show(1);
             $(this).html('<i class="layui-icon layui-icon-shrink-right"></i>');
         }
+        setTimeout(function(){
+            $("table").bootstrapTable('resetView')
+        }, 1000)
     })
     $('.nav-icon').click(function(){
         return false;
     })
     // 刷新当前页面
     $('#refresh').click(function(){
-        window.location.reload()
+        switchTab(activeTab);
     })
     // 用户信息
     $('#user').click(function(e){
