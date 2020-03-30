@@ -1,6 +1,5 @@
 <html lang="en">
     <head>
-    <meta http-equiv="Access-Control-Allow-Origin" content="*">
     <style>
         #home-content{
             height: 100%;
@@ -20,10 +19,6 @@
             height: calc(100vh - 475px);
             overflow: auto;
         }
-        .about{
-            height: calc(100vh - 125px);
-            overflow: auto;
-        }
         #home-content .layui-carousel-ind {
             position: absolute;
             top: -40px;
@@ -40,31 +35,45 @@
         #home-content .layui-carousel-ind .layui-this{
             background-color: #999;
         }
-        .layui-carousel .ul-item{
+        #home-content .layui-carousel .ul-item{
             background: #fff;
         }
-        .layui-carousel .li-item{
+        #home-content .layui-carousel .li-item{
             height: 120px;
             background-color: #fff;
             cursor: pointer;
             line-height: 50px;
         }
-        .layui-carousel .li-item .ico:hover{
+        #home-content .layui-carousel .li-item .ico:hover{
             background-color: #F1F1F1;
             transition: all .3s linear;
         }
-        .layui-carousel .li-item .ico{
+        #home-content .layui-carousel .li-item .ico{
             background-color: #F8F8F8;
             border-radius: 8px;
             line-height: 70px;
             transition: all .3s linear;
             font-size: 30px;
         }
-        .layui-carousel .li-item .ico i{
+        #home-content .layui-carousel .li-item .ico i{
             font-size: 26px;
         }
-        .layui-carousel .ul-item{
+        #home-content .layui-carousel .ul-item{
             text-align: center;
+        }
+        #home-content .about{
+            height: calc(100vh - 125px);
+            display: flex;
+            flex-direction: column;
+        }
+        #home-content .about .layui-card-body{
+            flex: 1;
+            overflow: hidden;
+        }
+        #home-content .about .layui-card-body .layui-timeline{
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -116,7 +125,7 @@
                         时间线
                     </div>
                     <div class="layui-card-body">
-                        <ul class="layui-timeline">
+                        <ul class="layui-timeline" id="history-timeline">
                         </ul>
                     </div>
                 </div>

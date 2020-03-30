@@ -97,6 +97,6 @@ function watingShow () {
 function watingHide () {
     $('#loading').hide();
 }
-function foo (res) {
-    console.log(res);
+function foo (data) {
+    console.log(data)
 }

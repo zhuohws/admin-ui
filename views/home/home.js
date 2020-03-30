@@ -408,29 +408,6 @@ function initTable () {
 function initHistory () {
     var history = [
         {
-            title: '一、夏朝（前2070—前1600）',
-            content: [
-                '前2070 启继承王位，建立夏朝，世袭制取代禅让制'
-            ]
-        },
-        {
-            title: '二、商朝（前1600—前1046）',
-            content: [
-                '前1600 鸣条之战，成汤灭夏建商',
-                '前1300 盘庚迁殷',
-            ]
-        },
-        {
-            title: '三、西周（前1046—前771）',
-            content: [
-                '前1046 牧野之战，姬发灭商建周，行分封制（有争议）',
-                '前900 周懿王即位，周室始衰',
-                '前842 国人暴动（中国历史有确切纪年的开端，一说前841）',
-                '前841 共和行政',
-                '前771 犬戎攻破镐京，西周灭亡',
-            ]
-        },
-        {
             title: '中华人民共和国（1949—今）',
             content: [
                 '1949 开国大典，中华人民共和国成立',
@@ -469,14 +446,39 @@ function initHistory () {
                 '2008 马英九当选，两岸三通实现',
                 '2012 中共十八大',
             ]
-        }
+        },
+        {
+            title: '一、夏朝（前2070—前1600）',
+            content: [
+                '前2070 启继承王位，建立夏朝，世袭制取代禅让制'
+            ]
+        },
+        {
+            title: '二、商朝（前1600—前1046）',
+            content: [
+                '前1600 鸣条之战，成汤灭夏建商',
+                '前1300 盘庚迁殷',
+            ]
+        },
+        {
+            title: '三、西周（前1046—前771）',
+            content: [
+                '前1046 牧野之战，姬发灭商建周，行分封制（有争议）',
+                '前900 周懿王即位，周室始衰',
+                '前842 国人暴动（中国历史有确切纪年的开端，一说前841）',
+                '前841 共和行政',
+                '前771 犬戎攻破镐京，西周灭亡',
+            ]
+        },
     ]
     layui.use('flow', function(){
         var flow = layui.flow;
         var index = 0;
         flow.load({
-            elem: '.layui-timeline',
+            mb: 50,
             isAuto: true,
+            elem: '#history-timeline',
+            scrollElem: '#history-timeline',
             done: function(page, next){
                 var str = '';
                 str += '<li class="layui-timeline-item">'
@@ -495,33 +497,44 @@ function initHistory () {
             }
         });
     });
-    var obj = {
-        key: '9b02fd65654841299c72d3e24d101f85',
-        yue: new Date().getMonth() + 1,
-        ri: new Date().getDate(),
-        type: 1
-    }
-    var src= 'http://api.avatardata.cn/HistoryToday/LookUp?'
-        + 'key=' + obj.key
-        + '&yue=' + obj.yue
-        + '&ri=' + obj.ri
-        + '&type=' + obj.type
-        + '&callback=' + foo
-    var script = document.createElement('script');
-    script.setAttribute("type","text/javascript");
-    script.src = src;
-    $(home.content).parents('body').append(script);
+    // var obj = {
+    //     key: '9b02fd65654841299c72d3e24d101f85',
+    //     yue: new Date().getMonth() + 1,
+    //     ri: new Date().getDate(),
+    //     type: 1
+    // }
+    // var src= 'http://api.avatardata.cn/HistoryToday/LookUp?'
+    //     + 'key=' + obj.key
+    //     + '&yue=' + obj.yue
+    //     + '&ri=' + obj.ri
+    //     + '&type=' + obj.type
+    //     + '&callback=' + foo;
+    // var script = document.createElement('script');
+    // script.type = 'text/javascript';
+    // // 传参一个回调函数名给后端，方便后端返回时执行这个在前端定义的回调函数
+    // script.src = src;
+    // console.log(script);
+    // // $(home.content).parents('body').append(script);
+    // function foo (data) {
+    //     console.log({data})
+    // }
     // $.ajax({
     //     url: 'http://api.avatardata.cn/HistoryToday/LookUp',
-    //     method: 'get',
+    //     method: 'post',
+    //     dataType: "jsonp",
+    //     jsonp:"callback",
+    //     jsonpCallback:"foo",
     //     data: {
     //         key: '9b02fd65654841299c72d3e24d101f85',
     //         yue: new Date().getMonth() + 1,
     //         ri: new Date().getDate(),
     //         type: 1
     //     },
-    //     success: function (res) {
-    //         console.log(res)
+    //     success: function (data) {
+    //         console.log(data)
+    //     },
+    //     error: function (data) {
+    //         console.log(data)
     //     }
     // })
 }
