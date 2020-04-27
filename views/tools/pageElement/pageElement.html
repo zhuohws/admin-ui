@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面元素</title>
+    <style>
+        #pageElement-content{
+            height: 97%;
+            margin: 0;
+            padding: 0 10px 10px 10px;
+            box-sizing: border-box;
+        }
+        #pageElement-content .layui-tab{
+            height: 100%;
+        }
+        #pageElement-content .layui-tab-content{
+            height: calc(100% - 70px);
+            width: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+        #pageElement-content .layui-tab-content .layui-tab-item .tab-item-child, .tab-item-child .layui-progress{
+            padding: 5px 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="pageElement-content">
+        <div class="layui-tab layui-tab-card" style="height: 100%;">
+            <ul class="layui-tab-title">
+                <li class="layui-this">常用</li>
+                <li>时间线</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <div class="tab-item-child">
+                        <blockquote class="layui-elem-quote layui-quote-nm">
+                            <p>进度条</p>
+                            <div class="layui-progress layui-progress-big" lay-showPercent="true" lay-filter="demo11">
+                                <div class="layui-progress-bar layui-bg-red"></div>
+                            </div> 
+                            <div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="demo12">
+                                <div class="layui-progress-bar layui-bg-red"></div>
+                            </div>
+                            <div class="layui-progress layui-progress-big" lay-showPercent="yes" lay-filter="demo13">
+                                <div class="layui-progress-bar layui-bg-green"></div>
+                            </div>
+                        </blockquote>
+                    </div>
+                    <div class="tab-item-child">
+                        <blockquote class="layui-elem-quote layui-quote-nm">
+                            <p>小圆点，通过 layui-badge-dot 来定义，里面不能加文字</p>
+                            <span class="layui-badge-dot"></span>
+                            <span class="layui-badge-dot layui-bg-orange"></span>
+                            <span class="layui-badge-dot layui-bg-green"></span>
+                            <span class="layui-badge-dot layui-bg-cyan"></span>
+                            <span class="layui-badge-dot layui-bg-blue"></span>
+                            <span class="layui-badge-dot layui-bg-black"></span>
+                            <span class="layui-badge-dot layui-bg-gray"></span>
+                                
+                            <p>椭圆体，通过 layui-badge 来定义。事实上我们把这个视作为主要使用方式</p>
+                            <span class="layui-badge">6</span>
+                            <span class="layui-badge">99</span>
+                            <span class="layui-badge">61728</span>
+                                
+                            <span class="layui-badge">赤</span>
+                            <span class="layui-badge layui-bg-orange">橙</span>
+                            <span class="layui-badge layui-bg-green">绿</span>
+                            <span class="layui-badge layui-bg-cyan">青</span>
+                            <span class="layui-badge layui-bg-blue">蓝</span>
+                            <span class="layui-badge layui-bg-black">黑</span>
+                            <span class="layui-badge layui-bg-gray">灰</span>
+                                
+                            <p>边框体，通过 layui-badge-rim 来定义</p>
+                            <span class="layui-badge-rim">6</span>
+                            <span class="layui-badge-rim">Hot</span>
+                        </blockquote>
+                    </div>
+                    <div class="tab-item-child">
+                        <blockquote class="layui-elem-quote layui-quote-nm">
+                            <p>主题</p>
+                            <button type="button" class="layui-btn layui-btn-primary" >原始</button>
+                            <button type="button" class="layui-btn" >默认</button>
+                            <button type="button" class="layui-btn layui-btn-normal" >百搭</button>
+                            <button type="button" class="layui-btn layui-btn-warm" >暖色</button>
+                            <button type="button" class="layui-btn layui-btn-danger" >警告</button>
+                            <button type="button" class="layui-btn layui-btn-disabled" >禁用</button>
+                            <p>尺寸</p>
+                            <button type="button" class="layui-btn layui-btn-lg">大型</button>
+                            <button type="button" class="layui-btn">默认</button>
+                            <button type="button" class="layui-btn layui-btn-sm">小型</button>
+                            <button type="button" class="layui-btn layui-btn-xs">迷你</button>
+                            <p>图标</p>
+                            <button type="button" class="layui-btn">
+                                <i class="layui-icon">&#xe608;</i> 添加
+                            </button>
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary">
+                                <i class="layui-icon">&#x1002;</i>
+                            </button>
+                            <p>按钮组</p>
+                            <div class="layui-btn-group">
+                                <button type="button" class="layui-btn">增加</button>
+                                <button type="button" class="layui-btn">编辑</button>
+                                <button type="button" class="layui-btn">删除</button>
+                            </div>
+                            <div class="layui-btn-group">
+                                <button type="button" class="layui-btn layui-btn-sm">
+                                    <i class="layui-icon">&#xe654;</i>
+                                </button>
+                                <button type="button" class="layui-btn layui-btn-sm">
+                                    <i class="layui-icon">&#xe642;</i>
+                                </button>
+                                <button type="button" class="layui-btn layui-btn-sm">
+                                    <i class="layui-icon">&#xe640;</i>
+                                </button>
+                                <button type="button" class="layui-btn layui-btn-sm">
+                                    <i class="layui-icon">&#xe602;</i>
+                                </button>
+                            </div>
+                            <div class="layui-btn-group">
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                                    <i class="layui-icon">&#xe654;</i>
+                                </button>
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                                    <i class="layui-icon">&#xe642;</i>
+                                </button>
+                                <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
+                                    <i class="layui-icon">&#xe640;</i>
+                                </button>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="layui-tab-item">
+                    <ul class="layui-timeline">
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                            <div class="layui-timeline-title">2022年底杭州东站边将新建成一个“枢纽商务区”</div>
+                                <p>杭州（彭埠）枢纽商务区建设有利于长三角一体化发展、拥江发展战略的纵深推进，同时对带动新制造业发展、打造城市有机更新样板也具有重要意义。</p>
+                                <p>“枢纽商务区”，规划面积有5.6平方公里，东至同协南路、沪杭高速，南至严家弄路、昙花庵路，西至秋涛北路，北至天城路。</p>
+                                <h4>1心1轴3板块（总体布局）</h4>
+                                <p>“一心”：是杭州东站，以此为中心，沿主轴线向东西两侧扩展。</p>
+                                <p>“一轴”：东段为“杭州东站东广场-和兴路-白石会展中心”，西段为“杭州东站西广场-运河湾-夏衍影视特色街区”，连成一条最具活力的中心线。</p>
+                                <p>“三板块”：分别是中央数字创新板块、运河文创活力板块和国际品质生活板块，要打造TOD经济示范区和总部经济集聚区，高铁经济标杆区和新制造业创新区，以及配备功能完善公共服务设施的枢纽生活样板区。</p>
+                            </div>
+                        </li>
+                        <li class="layui-timeline-item">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">发展史</h3>
+                                <p>第一次被称为杭州的时候是在隋朝，开皇九年。废了钱唐县，改为了杭州。那个时候的杭州范围主要在凤凰山河吴山那块。而“西湖”第一次作为湖名出现是因为白居易的诗，“欲将此意凭回棹，报于西湖风雨月”。后来，很多文人在游历西湖，被美丽的风景惊叹后，纷纷写诗作词。“西湖”这个名字就被人们传送起来。而西湖最早是因为当时，每到春天的时候钱塘江的水就会泛滥冲毁农田和城市。为了防洪水，就出现了西湖，西湖成为了杭州百姓救命的水源。</p>
+                                <p>历史的车轮滚滚向前，杭州迎来了最美好的时代。公元1138年，南宋定都杭州，升杭州为临安府。定都后，开始修建皇宫。当时的皇城东至馒头山，南部、西部都到凤凰山的东南。而帝王将相的府邸大多分布在临安城最繁华的地方，譬如现在的望仙桥（德寿宫）、孤山（西太乙宫）、后市街（龙翔宫）等。“西湖十景”也在这个时候形成。</p>
+                                <p>胡庆余堂</p>
+                                <p>元朝时候，回族人大量定居在杭州。我国伊斯兰教的四大古寺之一——凤凰寺也在元朝时重建。</p>
+                                <p>清朝时，杭州被称为杭州府。这个时候城市里还进驻了一只清朝八旗军。在清朝统治时，对地方行政有很大的影响。三墩、瓶窑、临平、留下等集镇都是这个时候形成的。很多老字号，胡庆余堂，孔凤春香粉店也是这个时候出现的。</p>
+                                <p>1912年，废除杭州府，成为杭州。涌金门、清波门、钱塘门也在修筑南山路的时候被拆除。今天的环城北路、环城中路、环城西路都是1960年以后拆除了之前的城墙修建成的。</p>
+                                <p>拱宸桥</p>
+                                <p>我们生活在一个城市，只有更好地了解了这个城市的历史，我们才能够更好的生活。如今的杭州已经成为了一个国际化的大都市，互联网之都。各种跨国企业，互联网公司。影响着我们的生活方式。2016年国际G20峰会的召开，更加加速着这座城市的发展。如今，这座城市有在积极努力准备着2020年的亚运会。小编在这座城市求学读书，如今又在这里工作，无法不热爱着这个美丽的城市。</p>
+                                <p>元朝时候，回族人大量定居在杭州。我国伊斯兰教的四大古寺之一——凤凰寺也在元朝时重建。</p>
+                                <p>清朝时，杭州被称为杭州府。这个时候城市里还进驻了一只清朝八旗军。在清朝统治时，对地方行政有很大的影响。三墩、瓶窑、临平、留下等集镇都是这个时候形成的。很多老字号，胡庆余堂，孔凤春香粉店也是这个时候出现的。</p>
+                                <p>1912年，废除杭州府，成为杭州。涌金门、清波门、钱塘门也在修筑南山路的时候被拆除。今天的环城北路、环城中路、环城西路都是1960年以后拆除了之前的城墙修建成的。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../views/tools/pageElement/pageElement.js"></script>
+    <script type="text/javascript">
+        pageElement.pageInit('#pageElement-content');
+    </script>
+</body>
+</html>

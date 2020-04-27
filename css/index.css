@@ -132,20 +132,21 @@
     display: flex;
     flex-direction: column;
 }
-.index-body>.main>.content>.layui-tab .layui-tab-title{
+.index-body>.main>.content>.layui-tab #index-tab-title{
     padding: 0 10px;
+    margin: 0;
 }
-.index-body>.main>.content>.layui-tab .layui-tab-title li{
+.index-body>.main>.content>.layui-tab #index-tab-title li{
     padding: 0 0 0 15px;
 }
-.index-body>.main>.content>.layui-tab>.layui-tab-content{
+.index-body>.main>.content>.layui-tab>#index-tab-content{
     height: 100%;
     margin: 0;
     flex: 1;
     padding: 0;
     overflow: auto;
 }
-.index-body>.main>.content>.layui-tab>.layui-tab-content>.layui-tab-item, .index-body>.main>.content>.layui-tab>.layui-tab-content>.layui-tab-item>.layui-show{
+.index-body>.main>.content>.layui-tab>#index-tab-content>.layui-tab-item, .index-body>.main>.content>.layui-tab>#index-tab-content>.layui-tab-item>.layui-show{
     height: 100%;
     width: 100%;
 }

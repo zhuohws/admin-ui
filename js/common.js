@@ -57,23 +57,23 @@ function switchTab (obj) {
         if (selectedTabs.indexOf(menuId) == -1) {
             selectedTabs.push(menuId);
             var liStr = '<li lay-id="' + menuId + '" data-layId="' + menuId + '">' + menuName + '</li>';
-            $('.layui-tab-title').append(liStr);
+            $('#index-tab-title').append(liStr);
             var contentStr = '<div class="layui-tab-item">'
                 // + '<iframe src="'+ url +'" frameborder="0" height="100%" width="100%"></iframe>'
                 + '<div class="page-content"></div>'
             + '</div>';
-            $('.layui-tab-content').append(contentStr);
+            $('#index-tab-content').append(contentStr);
             watingShow();
-            $('.page-content').last().load(url, function(response,status,xhr) {
+            $('#index-tab-content .page-content').last().load(url, function(response,status,xhr) {
                 if (response && response.indexOf('<title>404 Not Found</title>') > -1) {
                     $('.page-content').last().load('404.html');
                 }
                 watingHide();
-                element.render('tab', 'tabDemo');
+                element.render('tab', 'indexTab');
             });
         } else {
             // 刷新页面
-            $('.layui-show .page-content').last().load('loading.html', function(response,status,xhr) {
+            $('#index-tab-content .layui-show .page-content').last().load('loading.html', function(response,status,xhr) {
                 setTimeout(function(){
                     watingShow();
                     $('.layui-show .page-content').last().load(url, function(response,status,xhr) {
@@ -83,7 +83,7 @@ function switchTab (obj) {
             });
         }
         activeTab = obj;
-        element.tabChange('tabDemo', menuId);
+        element.tabChange('indexTab', menuId);
     }
 };
 // 窗口变化时更新table
@@ -96,7 +96,4 @@ function watingShow () {
 }
 function watingHide () {
     $('#loading').hide();
-}
-function foo (data) {
-    console.log(data)
 }

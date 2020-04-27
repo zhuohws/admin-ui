@@ -34,89 +34,145 @@ function getMenu () {
             menuUrl: 'home/home.html',
         },
         {
-            menuName: 'echarts组件',
-            menuIcon: 'layui-icon layui-icon-chart',
-            menuId: 'C',
-            menuUrl: '',
-            children: [
-                {
-                    menuName: '柱状图',
-                    menuIcon: 'layui-icon layui-icon-template-1',
-                    menuId: 4,
-                    menuUrl: 'echarts/bar/bar.html',
-                },
-                {
-                    menuName: '饼状图',
-                    menuIcon: 'layui-icon layui-icon-light',
-                    menuId: 5,
-                    menuUrl: 'echarts/pie/pie.html',
-                },
-                {
-                    menuName: '折线图',
-                    menuIcon: 'layui-icon layui-icon-senior',
-                    menuId: 6,
-                    menuUrl: 'echarts/line/line.html',
-                }
-            ]
-        },
-        {
-            menuName: '互联网',
+            menuName: '表单',
             menuIcon: 'layui-icon layui-icon-chart-screen',
             menuId: 'B',
             menuUrl: '',
             unionId: 'youyi',
             children: [
                 {
-                    menuName: '移动模块',
+                    menuName: '表单元素',
                     menuIcon: 'layui-icon layui-icon-face-surprised',
-                    menuId: 1,
+                    menuId: 'BA',
                     menuUrl: 'page2/page2.html',
                 },
                 {
-                    menuName: '后台模版',
+                    menuName: '表单组合',
                     menuIcon: 'layui-icon layui-icon-fire',
-                    menuId: 2,
-                    menuUrl: 'page3/page3.html',
-                },
-                {
-                    menuName: '电商平台',
-                    menuIcon: 'layui-icon layui-icon-face-smile',
-                    menuId: 3,
+                    menuId: 'BBB',
                     menuUrl: 'page3/page3.html',
                 }
             ]
         },
         {
-            menuName: '设置',
-            menuIcon: 'layui-icon layui-icon-set',
+            menuName: '表格',
+            menuIcon: 'layui-icon layui-icon-chart-screen',
+            menuId: 'C',
+            menuUrl: '',
+            unionId: 'youyi',
+            children: [
+                {
+                    menuName: '表格元素',
+                    menuIcon: 'layui-icon layui-icon-face-surprised',
+                    menuId: 'CA',
+                    menuUrl: 'page2/page2.html',
+                },
+                {
+                    menuName: '表格组合',
+                    menuIcon: 'layui-icon layui-icon-fire',
+                    menuId: 'CB',
+                    menuUrl: 'page3/page3.html',
+                }
+            ]
+        },
+        {
+            menuName: '页面布局实现',
+            menuIcon: 'layui-icon layui-icon-chart-screen',
             menuId: 'D',
+            menuUrl: '',
+            unionId: 'youyi',
+            children: [
+                {
+                    menuName: '表格元素',
+                    menuIcon: 'layui-icon layui-icon-face-surprised',
+                    menuId: 'DA',
+                    menuUrl: 'page2/page2.html',
+                },
+                {
+                    menuName: '表格组合',
+                    menuIcon: 'layui-icon layui-icon-fire',
+                    menuId: 'DB',
+                    menuUrl: 'page3/page3.html',
+                }
+            ]
+        },
+        {
+            menuName: '弹窗',
+            menuIcon: 'layui-icon layui-icon-set',
+            menuId: 'E',
             menuUrl: '',
             children: [
                 {
                     menuName: '系统设置',
                     menuIcon: 'layui-icon layui-icon-set-sm',
-                    menuId: 7,
+                    menuId: 'EA',
                     menuUrl: 'page4/page4.html',
                 },
                 {
                     menuName: '用户设置',
                     menuIcon: 'layui-icon layui-icon-set-sm',
-                    menuId: 8,
+                    menuId: 'EB',
                     menuUrl: '',
                     children: [
                         {
                             menuName: '角色设置',
                             menuIcon: 'layui-icon layui-icon-set-sm',
-                            menuId: 'D81',
+                            menuId: 'EBA',
                             menuUrl: 'page4/page4.html',
                         },
                         {
                             menuName: '权限设置',
                             menuIcon: 'layui-icon layui-icon-set-sm',
-                            menuId: 'D82',
-                            menuUrl: 'page5/page5.html',
+                            menuId: 'EBB',
+                            menuUrl: 'page4/page4.html',
                         }
                     ]
+                }
+            ]
+        },
+        {
+            menuName: '实用工具',
+            menuIcon: 'layui-icon layui-icon-set',
+            menuId: 'F',
+            menuUrl: '',
+            children: [
+                {
+                    menuName: '页面元素',
+                    menuIcon: 'layui-icon layui-icon-set-sm',
+                    menuId: 'FA',
+                    menuUrl: 'tools/pageElement/pageElement.html',
+                },
+                {
+                    menuName: '组件',
+                    menuIcon: 'layui-icon layui-icon-set-sm',
+                    menuId: 'FB',
+                    menuUrl: 'tools/components/components.html'
+                }
+            ]
+        },
+        {
+            menuName: 'echarts组件',
+            menuIcon: 'layui-icon layui-icon-chart',
+            menuId: 'G',
+            menuUrl: '',
+            children: [
+                {
+                    menuName: '柱状图',
+                    menuIcon: 'layui-icon layui-icon-template-1',
+                    menuId: 'GA',
+                    menuUrl: 'echarts/bar/bar.html',
+                },
+                {
+                    menuName: '饼状图',
+                    menuIcon: 'layui-icon layui-icon-light',
+                    menuId: 'GB',
+                    menuUrl: 'echarts/pie/pie.html',
+                },
+                {
+                    menuName: '折线图',
+                    menuIcon: 'layui-icon layui-icon-senior',
+                    menuId: 'GC',
+                    menuUrl: 'echarts/line/line.html',
                 }
             ]
         },
@@ -125,7 +181,7 @@ function getMenu () {
 }
 // 初始化menu
 function initMenu (menu) {
-    $('.layui-nav').empty();
+    $('#indexNav').empty();
     var navHtml = '';
     $.each(menu, function (index, item) {
         navHtml += '<li class="layui-nav-item">';
@@ -135,13 +191,13 @@ function initMenu (menu) {
         }
         navHtml += '</li>';
     });
-    $('.layui-nav').html(navHtml);
-    element.render('nav', 'navDemo');
+    $('#indexNav').html(navHtml);
+    element.render('nav', 'indexNav');
 }
 // 监听element切换等事件
 function elementBind () {
     // 菜单点击事件
-    element.on('nav(navDemo)', function(data){
+    element.on('nav(indexNav)', function(data){
         var obj = {
             menuUrl : $(this).attr('data-url'),
             menuId : $(this).attr('data-menuId'),
@@ -150,11 +206,11 @@ function elementBind () {
         switchTab(obj);
     });
     // tab切换绑定
-    element.on('tab(tabDemo)', function(data){
+    element.on('tab(indexTab)', function(data){
         var activeId = $(this).attr('data-layid');
-        $.each($('#navDemo').find('.menu-item'), function(i, n){
+        $.each($('#indexNav').find('.menu-item'), function(i, n){
             if ($(n).attr('data-menuid') && $(n).attr('data-menuid') == activeId) {
-                $('#navDemo').find('.layui-this').removeClass('layui-this');
+                $('#indexNav').find('.layui-this').removeClass('layui-this');
                 $('.layui-nav-itemed').removeClass('layui-nav-itemed');
                 if (!$(n).parent().hasClass('layui-nav-item')) {
                     $(n).parents('.layui-nav-item').addClass('layui-nav-itemed');
@@ -165,7 +221,7 @@ function elementBind () {
         })
     });
     // tab删除事件
-    element.on('tabDelete(tabDemo)', function(data){
+    element.on('tabDelete(indexTab)', function(data){
         var layId = $(this).parent().attr('data-layId');
         selectedTabs.splice(selectedTabs.indexOf(layId + ''), 1);
     });
