@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入css -->
+    <link rel="stylesheet" href="../../node_modules/layui-src/dist/css/layui.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-table/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-table/dist/bootstrap-table-fixed-columns.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <title>编辑</title>
+    <style>
+        .container-edit{
+            padding: 20px 15px 10px 15px;
+        }
+        .container-edit .layui-input-block {
+            margin-left: 80px;
+            min-height: 36px;
+        }
+        .container-edit .layui-form-label {
+            text-align: left;
+            /* background: #efefef; */
+        }
+        .container-edit .layui-form-item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-edit">
+        <form class="layui-form" lay-filter="editGoods">
+            <div class="layui-form-item">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title"  placeholder="请输入名称" autocomplete="off" class="layui-input" id="edit-name">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">价格</label>
+                <div class="layui-input-block">
+                    <input type="text" name="price"  placeholder="请输入名称" autocomplete="off" class="layui-input" id="edit-price">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">描述</label>
+                <div class="layui-input-block">
+                    <textarea name="describe" placeholder="请输入描述" class="layui-textarea" rows="6" id="edit-describe"></textarea>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-block">
+                    <select name="type" id="edit-type">
+                        <option value="">请选择类型</option>
+                        <option value="0">生活用品1</option>
+                        <option value="1">生活用品2</option>
+                        <option value="2">生活用品3</option>
+                        <option value="3">生活用品4</option>
+                        <option value="4">生活用品5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">销量</label>
+                <div class="layui-input-block">
+                    <input type="text" name="sale"  placeholder="请输入名称" autocomplete="off" class="layui-input" id="edit-sale">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">库存</label>
+                <div class="layui-input-block">
+                    <input type="text" name="count"  placeholder="请输入名称" autocomplete="off" class="layui-input" id="edit-count">
+                </div>
+            </div>
+        </form>
+    </div>
+    <script  type="text/javascript" src="../../node_modules/jquery.min.js"></script>
+    <script  type="text/javascript" src="../../node_modules/jquery-cookie.js"></script>
+    <script type="text/javascript" src="../../node_modules/echarts.min.js"></script>
+    <script  type="text/javascript" src="../../node_modules/layui-src/dist/layui.all.js"></script>
+    <script  type="text/javascript" src="../../js/common.js"></script>
+    <script  type="text/javascript" src="../../js/index.js"></script>
+    <!-- <script type="text/javascript" src="../../views/table/table.js"></script>
+    <script type="text/javascript">
+        myTable.initEdit();
+    </script> -->
+</body>
+</html>

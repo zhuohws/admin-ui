@@ -28,6 +28,20 @@ function getMenu () {
     // 加载菜单
     myIndex.menu = [
         {
+            menuName: '弹窗',
+            menuIcon: 'layui-icon layui-icon-set',
+            menuId: 'E',
+            menuUrl: 'openBox/openBox.html',
+            unionId: 'openBox'
+        },
+        {
+            menuName: '表格',
+            menuIcon: 'layui-icon layui-icon-chart-screen',
+            menuId: 'C',
+            menuUrl: 'table/table.html',
+            unionId: 'table'
+        },
+        {
             menuName: '首页',
             menuIcon: 'layui-icon layui-icon-home',
             menuId: 'A',
@@ -51,82 +65,6 @@ function getMenu () {
                     menuIcon: 'layui-icon layui-icon-fire',
                     menuId: 'BBB',
                     menuUrl: 'page3/page3.html',
-                }
-            ]
-        },
-        {
-            menuName: '表格',
-            menuIcon: 'layui-icon layui-icon-chart-screen',
-            menuId: 'C',
-            menuUrl: '',
-            unionId: 'youyi',
-            children: [
-                {
-                    menuName: '表格元素',
-                    menuIcon: 'layui-icon layui-icon-face-surprised',
-                    menuId: 'CA',
-                    menuUrl: 'page2/page2.html',
-                },
-                {
-                    menuName: '表格组合',
-                    menuIcon: 'layui-icon layui-icon-fire',
-                    menuId: 'CB',
-                    menuUrl: 'page3/page3.html',
-                }
-            ]
-        },
-        {
-            menuName: '页面布局实现',
-            menuIcon: 'layui-icon layui-icon-chart-screen',
-            menuId: 'D',
-            menuUrl: '',
-            unionId: 'youyi',
-            children: [
-                {
-                    menuName: '表格元素',
-                    menuIcon: 'layui-icon layui-icon-face-surprised',
-                    menuId: 'DA',
-                    menuUrl: 'page2/page2.html',
-                },
-                {
-                    menuName: '表格组合',
-                    menuIcon: 'layui-icon layui-icon-fire',
-                    menuId: 'DB',
-                    menuUrl: 'page3/page3.html',
-                }
-            ]
-        },
-        {
-            menuName: '弹窗',
-            menuIcon: 'layui-icon layui-icon-set',
-            menuId: 'E',
-            menuUrl: '',
-            children: [
-                {
-                    menuName: '系统设置',
-                    menuIcon: 'layui-icon layui-icon-set-sm',
-                    menuId: 'EA',
-                    menuUrl: 'page4/page4.html',
-                },
-                {
-                    menuName: '用户设置',
-                    menuIcon: 'layui-icon layui-icon-set-sm',
-                    menuId: 'EB',
-                    menuUrl: '',
-                    children: [
-                        {
-                            menuName: '角色设置',
-                            menuIcon: 'layui-icon layui-icon-set-sm',
-                            menuId: 'EBA',
-                            menuUrl: 'page4/page4.html',
-                        },
-                        {
-                            menuName: '权限设置',
-                            menuIcon: 'layui-icon layui-icon-set-sm',
-                            menuId: 'EBB',
-                            menuUrl: 'page4/page4.html',
-                        }
-                    ]
                 }
             ]
         },

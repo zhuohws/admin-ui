@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #table-content{
+            height: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #table-content .operate-btns{
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        #table-content .layui-input-block {
+            margin-left: 80px;
+            min-height: 36px;
+        }
+        #table-content .layui-form-label {
+            text-align: left;
+            background: #efefef;
+        }
+        #table-content .bootstrap-table .fixed-table-pagination > .pagination, .bootstrap-table .fixed-table-pagination > .pagination-detail {
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="table-content">
+        <div class="filter">
+            <form class="layui-form layui-row layui-col-space8" action="" lay-filter="searchFilter">
+                <div class="layui-col-md3">
+                    <label class="layui-form-label">名称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title"  placeholder="请输入名称" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-col-md3">
+                    <label class="layui-form-label">类型</label>
+                    <div class="layui-input-block">
+                        <select name="city">
+                            <option value="">请选择类型</option>
+                            <option value="0">生活用品</option>
+                            <option value="1">生活用品</option>
+                            <option value="2">生活用品</option>
+                            <option value="3">生活用品</option>
+                            <option value="4">生活用品</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-col-md3">
+                    <label class="layui-form-label">销量</label>
+                    <div class="layui-input-block">
+                            <select name="gender">
+                                <option value="">请选择销量</option>
+                                <option value="0">1000-5000</option>
+                                <option value="0">5000-50000</option>
+                                <option value="0">50000+</option>
+                            </select>
+                    </div>
+                </div>
+                <div class="layui-col-md3 text-right">
+                    <button type="button" class="layui-btn layui-btn-sm" id="btn-search">  <i class="layui-icon layui-icon-search"></i> 查询</button>
+                </div>
+            </form>
+        </div>
+        <div class="operate-btns text-right">
+            <button type="button" class="layui-btn layui-btn-sm" id="btn-add">  <i class="layui-icon layui-icon-add-1"></i> 新增</button>
+            <button type="button" class="layui-btn layui-btn-sm" id="btn-delete">  <i class="layui-icon layui-icon-delete"></i> 删除</button>
+            <button type="button" class="layui-btn layui-btn-sm" id="btn-edit">  <i class="layui-icon layui-icon-edit"></i> 修改</button>
+        </div>
+        <div class="table">
+            <table id="table_demo" class="table table-striped table-bordered table-hover" style="table-layout: fixed;word-break:break-all;word-wrap:break-word;"></table>
+        </div>
+    </div>
+    <script type="text/javascript" src="../views/table/table.js"></script>
+    <script type="text/javascript">
+        myTable.pageInit('#table-content');
+    </script>
+</body>
+</html>

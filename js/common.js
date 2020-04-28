@@ -2,6 +2,7 @@
 // 2020/03/26
 var layer = layui.layer,
     carousel = layui.carousel,
+    form = layui.form,
     element = layui.element;
 var selectedTabs = [];
 var activeTab = {};
@@ -73,7 +74,7 @@ function switchTab (obj) {
             });
         } else {
             // 刷新页面
-            $('#index-tab-content .layui-show .page-content').last().load('loading.html', function(response,status,xhr) {
+            $('.layui-show .page-content').last().load('loading.html', function(response,status,xhr) {
                 setTimeout(function(){
                     watingShow();
                     $('.layui-show .page-content').last().load(url, function(response,status,xhr) {
@@ -88,7 +89,9 @@ function switchTab (obj) {
 };
 // 窗口变化时更新table
 $(window).resize(function(){
-    $("table").bootstrapTable('resetView');
+    if ($("table")) {
+        $("table").bootstrapTable('resetView');
+    }
 })
 // loading
 function watingShow () {

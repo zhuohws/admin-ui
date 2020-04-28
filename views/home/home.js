@@ -166,8 +166,8 @@ function initFieldset () {
 // 初始化table
 function initTable () {
     var tableHeight = $('.table-example>.layui-card-body')[0].clientHeight - 20;
-    $('#example-table').bootstrapTable('destroy').bootstrapTable({
-        // url: 'data1.json',
+    $('#example-table', home.content).bootstrapTable('destroy').bootstrapTable({
+        url: '../json/table.json',
         locale: 'zh-CN', //设置语言
         pagination: true,
         height: tableHeight,
@@ -218,128 +218,6 @@ function initTable () {
             // }
             return {};
         },
-        data: [
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 12345,
-                repertory: 67541
-            },
-            {
-                id: 2,
-                name: '盼盼软面包',
-                describe: '盼盼 法式软面包 早餐饼干糕点整箱装奶香味1320g ',
-                price: '29.80',
-                salesVolume: 16618,
-                repertory: 67541
-            },
-            {
-                id: 3,
-                name: '盼盼麦香鸡味块薯片',
-                describe: '盼盼麦香鸡味块薯片 休闲膨化零食大礼包810g',
-                price: '33.9',
-                salesVolume: 9999,
-                repertory: 888
-            },
-            {
-                id: 1,
-                name: '蒙牛优益C',
-                describe: '蒙牛优益C 百香果味 330ml*4活菌型 软酸菌饮品',
-                price: '46.7',
-                salesVolume: 99999,
-                repertory: 222
-            },
-            {
-                id: 1,
-                name: '咪咪虾条',
-                describe: '咪咪 虾条 虾味 怀旧好吃膨化零食大礼包 网红休闲小点心糕点（18g*20包）360g/袋 ',
-                price: '6.2',
-                salesVolume: 22633,
-                repertory: 333
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-            {
-                id: 1,
-                name: '猫头鹰咖啡',
-                describe: '马来西亚进口，猫头鹰MOW采用阿拉比卡咖啡豆 研磨系列 全新 棉带浸泡',
-                price: '46.7',
-                salesVolume: 1622,
-                repertory: 67541
-            },
-        ],
         columns: [{
             checkbox: true,
             width: '6%',
